@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+}
+.header{
+    background-color: white;
+    border-style: solid;
+    /*border-radius: -1px;*/
+    border-color: black;
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    top: 0;
+    width: 99dvw;
+    height: 5dvh;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+}
