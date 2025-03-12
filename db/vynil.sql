@@ -30,7 +30,7 @@ USE `vynil`;
 --
 
 CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL,
+  `id_usuario` int(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `idade` int(11) NOT NULL,
   `cpf` varchar(20) NOT NULL,
@@ -58,7 +58,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
