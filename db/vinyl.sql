@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11/03/2025 às 20:53
+-- Tempo de geração: 12/03/2025 às 21:04
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `vynil`
+-- Banco de dados: `vinyl`
 --
-CREATE DATABASE IF NOT EXISTS `vynil` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `vynil`;
+CREATE DATABASE IF NOT EXISTS `vinyl` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vinyl`;
 
 -- --------------------------------------------------------
 
