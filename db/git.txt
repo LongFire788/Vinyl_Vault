@@ -1,0 +1,7 @@
+Login github no command line "user.name" e "user.email"
+
+Nome:
+git config --global user.name "FIRST_NAME LAST_NAME"
+
+Email:
+git config --global user.email "MY_NAME@example.com"
