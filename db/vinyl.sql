@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/03/2025 às 21:04
+-- Tempo de geração: 15/03/2025 às 16:25
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -32,12 +32,15 @@ USE `vinyl`;
 CREATE TABLE `usuario` (
   `id_usuario` int(255) NOT NULL,
   `nome` varchar(255) NOT NULL,
+  `sobrenome` varchar(30) NOT NULL,
+  `user` varchar(60) NOT NULL,
   `idade` int(11) NOT NULL,
   `cpf` varchar(20) NOT NULL,
   `foto_perfil` varchar(255) DEFAULT NULL,
   `email` varchar(60) NOT NULL,
   `senha` varchar(30) NOT NULL,
-  `genero` varchar(1) DEFAULT NULL
+  `genero` varchar(1) DEFAULT NULL,
+  `adm` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
