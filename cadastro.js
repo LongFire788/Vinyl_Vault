@@ -22,16 +22,17 @@ function mask(o, f) {
     return r;
   }
   
-  function CheckPassword() 
+  function checkPassword() 
   { 
-    inputtxt = document.getElementById("idade");
-    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    if(inputtxt.value.match(decimal)) 
+    inputtxt = getElementById('psw');
+    // var letra_m=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    var letra_m = /^(?=.*[a-z])$/;
+    if(inputtxt.value.match(letra_m)) 
     { 
     let letra = document.getElementById("letter");
 
-    letra.classList.remove("invalido");
-    letra.classList.add("valido");
+    letra.classList.remove("invalid");
+    letra.classList.add("valid");
     }
     else
     { 

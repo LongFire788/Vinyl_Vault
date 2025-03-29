@@ -32,7 +32,7 @@
             <span class="ls-label-text-prefix ls-ico-user"></span>
 
           <div>
-            <input type="password" id="psw" name="psw" placeholder="Senha" title="" onkeypress="CheckPassword()"  required>
+            <input type="password" id="psw" name="psw" placeholder="Senha" title="" onkeypress="checkPassword()"  required>
             
             <p id="letter" class="invalid">Uma letra <b>minuscula</b></p>
             <p id="capital" class="invalid">Uma letra <b>maiuscula</b></p>

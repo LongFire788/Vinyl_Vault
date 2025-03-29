@@ -1,5 +1,6 @@
 <?php
     require_once "php/db_connect.php";
+    require "php/querry.php";
     
     $nome = $_POST['nome'];
     $sobrenome = $_POST['sobrenome'];
@@ -34,14 +35,25 @@
             window.location.href='cadastro.php';
             </script>";
         }else{
-            $query_select = "SELECT * FROM, email WHERE email = '$email'";
-            $query_select2 = "SELECT * FROM cpf WHERE cpf = '$cpf'";
-            $select = mysqli_query($connect, $query_select);
-            $select2 = mysqli_query($connect, $query_select2);
-            $array = mysqli_fetch_array($select, MYSQLI_ASSOC);
-            $array2 = mysqli_fetch_array($select2, MYSQLI_ASSOC);
-            if($array == '' || $array == null){
-                $query = "INSERT INTO usuario (nome, sobrenome, user, idade, cpf, foto perfil, email, senha, genero) VALUES ('$nome', '$sobrenome', '$user', '$idade', '$cpf', '$imagem', '$email', '$senha', '$gen'";
+            $query_select = "SELECT * FROM usuario WHERE email = '$email'";
+            query($query_select);
+            $array1 = $array;
+            
+            $query_select2 = "SELECT * FROM usuario WHERE cpf = '$cpf'";
+            query($query_select2);
+            $array2 = $array;
+
+            $query_select3 = "SELECT * FROM usuario";
+            query($query_select3);
+            $array3 = $array;
+
+            if($array1 == '' || $array1 == null && $array2 == null || $array2 == ''){
+                if($array3 == ''|| $array3 == null){
+                    $tipo = 1;
+                }else{
+                    $tipo = 0;
+                }
+                $query = "INSERT INTO usuario (nome, sobrenome, user, idade, cpf, foto perfil, email, senha, genero, adm) VALUES ('$nome', '$sobrenome', '$user', '$idade', '$cpf', '$imagem', '$email', '$senha', '$gen', '$$tipo'";
             }
 
         }
