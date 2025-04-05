@@ -18,7 +18,7 @@
             <button>create</button>
             <p class="message">Ja registrado? <a href="#">Entre</a></p>
           </form>
-          <form class="login-form" action="change_photo.php" method="POST" enctype="multipart/form-data">
+          <form class="login-form" action="imagem_usuario.php" method="POST" enctype="multipart/form-data">
           <p class="text">Insira a foto</p>
           <input type="file" name="image">
             <button>Salvar</button>
