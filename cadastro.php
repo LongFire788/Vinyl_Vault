@@ -39,7 +39,6 @@
             <p id="number" class="invalid">Um <b>numero</b></p>
             <p id="length" class="invalid">Minimo <b>6 caracteres</b></p>
 
-            <input type="c_password" id="c_psw" name="c_psw" placeholder="Confirme a sua senha" title="" onkeypress="CheckPassword()"  required>
 
             <input type="email" placeholder="Email" name="email" id="email"/>
             <p class="p">Gênero:</p>

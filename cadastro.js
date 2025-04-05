@@ -24,18 +24,62 @@ function mask(o, f) {
   
   function checkPassword() 
   { 
-    inputtxt = getElementById('psw');
-    // var letra_m=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-    var letra_m = /^(?=.*[a-z])$/;
-    if(inputtxt.value.match(letra_m)) 
-    { 
-    let letra = document.getElementById("letter");
-
-    letra.classList.remove("invalid");
-    letra.classList.add("valid");
+    var myInput = document.getElementById("psw");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+    
+    // When the user clicks on the password field, show the message box
+    myInput.onfocus = function() {
+      document.getElementById("message").style.display = "block";
     }
-    else
-    { 
+    
+    // When the user clicks outside of the password field, hide the message box
+    myInput.onblur = function() {
+      document.getElementById("message").style.display = "none";
+    }
+    
+    // When the user starts to type something inside the password field
+    myInput.onkeyup = function() {
+      // Validate lowercase letters
+      var lowerCaseLetters = /[a-z]/g;
+      if(myInput.value.match(lowerCaseLetters)) {
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+      } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+    
+      // Validate capital letters
+      var upperCaseLetters = /[A-Z]/g;
+      if(myInput.value.match(upperCaseLetters)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+      } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+      }
+    
+      // Validate numbers
+      var numbers = /[0-9]/g;
+      if(myInput.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+      } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+      }
+    
+      // Validate length
+      if(myInput.value.length >= 6) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+      } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
     }
   }
   function checkIdade(){
@@ -53,13 +97,15 @@ function mask(o, f) {
     }
 
   }
-
   
   function TesteFinal(){
-    inputtxt = document.getElementById("psw");
-    var numeros = /([0-9])/;
-    var alfabeto = /([a-zA-Z])/;
-    if(inputtxt.value.match(numeros) && inputtxt.value.match(alfabeto)) 
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+
+    if(letter.classList.contains("valid") && capital.classList.contains("valid") && number.classList.contains("valid") && 
+    length.classList.contains("valid"))
     {
       return true;
 
@@ -68,7 +114,5 @@ function mask(o, f) {
       alert('Senha não cumpre os requisitos');
       window.location.href='cadastro.php';
       event.preventDefault();
-
-
     }
   }
