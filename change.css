@@ -120,10 +120,28 @@
     color: #EF3B3A;
   }
   body {
-    background-image: url("css/foto2.png");
+    background-image: url("css/foto5.jpg");
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;  
     background-repeat: no-repeat;  
     background-size: cover;
   }
+  .text{
+    color: #FFFFFF;
+  }
+  .textArea {
+    padding: 115px 99px;
+    background-color: #ffffff;
+    border-radius: 8%;
+    font-size: 14px;
+    padding-top: 0px;
+    padding-left: 0px;
+    text-align: -webkit-auto;
+    /* scroll-margin: 0px; */
+  }
+  ::-webkit-scrollbar{
+    width:0;
+  }.textArea:focus {
+    outline:none;
+}

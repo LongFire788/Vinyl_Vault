@@ -1,5 +1,5 @@
 <?php
-    require_once "php/db_connect.php";
+    require "php/db_connect.php";
     require "php/querry.php";
     
     $nome = $_POST['nome'];
@@ -7,7 +7,7 @@
     $user = $_POST['user'];
     $idade = $_POST['idade'];
     $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
+    $senha = $_POST['psw'];
     $email = $_POST['email'];
     $gen = $_POST['gen'];
     $imagem = "foto_padrao.png";
@@ -29,16 +29,14 @@
         </script>";
     }else{
         $query_select = "SELECT * FROM usuario WHERE email = '$email'";
-        query($query_select);
-        $array1 = $array;
+        $array1 = query($query_select);
         
         $query_select2 = "SELECT * FROM usuario WHERE cpf = '$cpf'";
-        query($query_select2);
-        $array2 = $array;
+        $array2 = query($query_select2);
 
         $query_select3 = "SELECT * FROM usuario";
-        query($query_select3);
-        $array3 = $array;
+        $array3 = query($query_select3);
+
 
         if($array1 == '' || $array1 == null && $array2 == null || $array2 == ''){
             if($array3 == ''|| $array3 == null){
@@ -46,7 +44,18 @@
             }else{
                 $tipo = 0;
             }
-            $query = "INSERT INTO usuario (nome, sobrenome, user, idade, cpf, foto perfil, email, senha, genero, adm) VALUES ('$nome', '$sobrenome', '$user', '$idade', '$cpf', '$imagem', '$email', '$senha', '$gen', '$$tipo'";
+            $query = "INSERT INTO usuario (nome, sobrenome, user, idade, cpf, foto_perfil, email, senha, genero, adm) VALUES ('$nome', '$sobrenome', '$user', '$idade', '$cpf', '$imagem', '$email', '$senha', '$gen', '$tipo')";
+            $insert = mysqli_query($connect, $query);
+
+            if($insert){
+                echo"<script language='javascript' type='text/javascript'>
+                alert('Cadastrado com sucesso!');
+                window.location.href='login.php'</script>";
+            }else{
+                echo"<script language='javascript' type='text/javascript'>
+                alert('Não foi possível cadastrar esse usuário');
+                window.location.href='cadastro.php'</script>";
+            }
         }
 
     }
