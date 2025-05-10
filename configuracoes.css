@@ -1,0 +1,188 @@
+/* Estilos para a página de configurações */
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto 30px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.mensagem {
+    background-color: #f8f9fa;
+    border-left: 4px solid #28a745;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.config-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.foto-perfil {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-perfil .imgUser {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dados-perfil {
+    flex: 2;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[readonly] {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+.info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.btn-atualizar {
+    background-color: #3e3e3e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-atualizar:hover {
+    background-color: #222;
+}
+
+.notificacoes {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.lista-notificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notificacao {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.notificacao:last-child {
+    border-bottom: none;
+}
+
+.notificacao-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.notificacao-cabecalho h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.data {
+    font-size: 12px;
+    color: #777;
+}
+
+.acoes {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.btn-voltar, .btn-colecao {
+    display: inline-block;
+    background-color: #3e3e3e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover, .btn-colecao:hover {
+    background-color: #222;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 40px;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .config-container {
+        flex-direction: column;
+    }
+    
+    .foto-perfil, .dados-perfil {
+        width: 100%;
+    }
+}

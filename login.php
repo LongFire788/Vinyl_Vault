@@ -15,7 +15,7 @@
             <button>create</button>
             <p class="message">Ja registrado? <a href="#">Entre</a></p>
           </form>
-          <form class="login-form" action="login_user.php" method="post">
+          <form class="login-form" action="login_usuario.php" method="post">
             <input type="email" placeholder="Email" name="email" id="email"/>
             <input type="password" placeholder="Senha" name="senha" id="senha"/>
             <button>Entre</button>

@@ -4,7 +4,7 @@ require_once "php/db_connect.php";
 $email = $_POST['email'];
 $password = $_POST['senha'];
 $query_select = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$password'";
-$db = mysqli_select_db($connect, 'inj');
+$db = mysqli_select_db($connect, 'vinyl');
 $verifica = mysqli_query($connect, $query_select);
 if (mysqli_num_rows($verifica)<=0){
     echo"<script language='javascript' type='text/javascript'>

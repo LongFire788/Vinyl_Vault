@@ -15,4 +15,27 @@
     margin: 0px;
     padding: 0px;
     position: fixed;
+    display: flex;           /* Mudado para flex */
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center;     /* Centraliza verticalmente */
+}
+.header_child{
+    margin-left: 15px;      /* Espaçamento à esquerda */
+}
+.imgUser{
+    width: 30px;            /* Reduzido para tamanho mais adequado ao cabeçalho */
+    height: 30px;
+    object-fit: cover;      /* Mudado para cover para melhor exibição */
+    border-radius: 100%;
+    margin-right: 10px;     /* Espaçamento à direita */
+}
+.botao_header{
+    display: inline-block;
+    margin-right: 15px;     /* Espaçamento à direita */
+}
+
+/* Novo estilo para agrupar os elementos da direita */
+.header-right {
+    display: flex;
+    align-items: center;
 }
